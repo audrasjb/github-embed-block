@@ -6,7 +6,7 @@
  *
  * Plugin Name:       GitHub Embed Block
  * Plugin URI:        https://jeanbaptisteaudras.com/github-embed-block-gutenberg-wordpress/
- * Description:       TODO
+ * Description:       Easily embed GitHub repositories in Gutenberg Editor.
  * Version:           0.1
  * Author:            audrasjb
  * Author URI:        https://jeanbaptisteaudras.com

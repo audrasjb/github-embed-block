@@ -9,17 +9,23 @@ Requires PHP: 5.6
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-TODO
+Easily embed GitHub repositories in Gutenberg Editor.
 
 == Description ==
 
-TODO
+This plugin adds a GitHub Repository Embed Block to the Block Editor.
 
 == Screenshots ==
+
+1. Insert GiHub Repo Block.
+1. Embed your GitHub Repositories in your Post content.
+2. Integrates well with your theme stylesheet.
 
 == Installation ==
 
 1. Install the plugin and activate.
+2. Go to the editor and choose GitHub Repo block.
+3. Add the URL of the repository and see the magic happen.
 
 == Changelog ==
 
