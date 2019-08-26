@@ -33,30 +33,30 @@ function geb_embed_repository( $attributes ) {
 					$data = json_decode( get_transient( '_geb_repository_' . sanitize_title_with_dashes( $github_url ) ) );
 					$content = '
 <div class="geb-br-wrapper">
-	<img class="geb-br-header-logo" src="' . plugin_dir_url( __FILE__ ) . '/images/github.svg" alt="GitHub Card" />
+	<img class="geb-br-header-logo" src="' . plugin_dir_url( __FILE__ ) . '/images/github.svg" alt="' . esc_html__( 'GitHub Card', 'github-embed-block' ) . '" />
 	<div class="geb-br-avatar">
 		<img class="geb-br-header-avatar" src="' . $data->owner->avatar_url . '" alt="" width="150" height="150" />
 	</div>
 	<div class="geb-br-main">
 		<p class="geb-br-title">
-			<strong><a target="_blank" rel="noopener noreferrer" href="' . $data->html_url . '">' . $data->name . ' <span class="screen-reader-text">(this link opens in a new window)</span></a></strong>
-			<em>by <a target="_blank" rel="noopener noreferrer" href="' . $data->owner->html_url . '">' . $data->owner->login . ' <span class="screen-reader-text">(this link opens in a new window)</span></a></em>
+			<strong><a target="_blank" rel="noopener noreferrer" href="' . $data->html_url . '">' . $data->name . ' <span class="screen-reader-text">(' . esc_html__( 'this link opens in a new window', 'github-embed-block' ) . ')</span></a></strong>
+			<em>by <a target="_blank" rel="noopener noreferrer" href="' . $data->owner->html_url . '">' . $data->owner->login . ' <span class="screen-reader-text">(' . esc_html__( 'this link opens in a new window', 'github-embed-block' ) . ')</span></a></em>
 		</p>
 		<p class="geb-br-description">' . $data->description . '</p>
 		<p class="geb-br-footer">
 			<span class="geb-br-subscribers">
-				<img src="' . plugin_dir_url( __FILE__ ) . '/images/subscribe.svg" alt="Github" /> 
-				' . $data->subscribers_count . ' Subscribers
+				<img src="' . plugin_dir_url( __FILE__ ) . '/images/subscribe.svg" alt="" /> 
+				' . $data->subscribers_count . ' ' . esc_html__( 'Subscribers', 'github-embed-block' ) . '
 			</span>
 			<span class="geb-br-watchers">
-				<img src="' . plugin_dir_url( __FILE__ ) . '/images/watch.svg" alt="Github" /> 
-				' . $data->watchers_count . ' Watchers
+				<img src="' . plugin_dir_url( __FILE__ ) . '/images/watch.svg" alt="" /> 
+				' . $data->watchers_count . ' ' . esc_html__( 'Watchers', 'github-embed-block' ) . '
 			</span>
 			<span class="geb-br-forks">
-				<img src="' . plugin_dir_url( __FILE__ ) . '/images/fork.svg" alt="Github" /> 
-				' . $data->forks_count . ' Forks
+				<img src="' . plugin_dir_url( __FILE__ ) . '/images/fork.svg" alt="" /> 
+				' . $data->forks_count . ' ' . esc_html__( 'Forks', 'github-embed-block' ) . '
 			</span>
-			<a target="_blank" rel="noopener noreferrer" class="geb-br-link" href="' . $data->html_url . '">Check out this repository on GitHub.com <span class="screen-reader-text">(this link opens in a new window)</span></a>
+			<a target="_blank" rel="noopener noreferrer" class="geb-br-link" href="' . $data->html_url . '">' . esc_html__( 'Check out this repository on GitHub.com', 'github-embed-block' ) . ' <span class="screen-reader-text">(' . esc_html__( 'this link opens in a new window', 'github-embed-block' ) . ')</span></a>
 		</p>
 	</div>
 </div>
@@ -70,30 +70,30 @@ function geb_embed_repository( $attributes ) {
 						set_transient( '_geb_repository_' . sanitize_title_with_dashes( $github_url ), json_encode( $data ) );
 						$content = '
 <div class="geb-br-wrapper">
-	<img class="geb-br-header-logo" src="' . plugin_dir_url( __FILE__ ) . '/images/github.svg" alt="GitHub Card" />
+	<img class="geb-br-header-logo" src="' . plugin_dir_url( __FILE__ ) . '/images/github.svg" alt="' . esc_html__( 'GitHub Card', 'github-embed-block' ) . '" />
 	<div class="geb-br-avatar">
 		<img class="geb-br-header-avatar" src="' . $data->owner->avatar_url . '" alt="" width="150" height="150" />
 	</div>
 	<div class="geb-br-main">
 		<p class="geb-br-title">
-			<strong><a target="_blank" rel="noopener noreferrer" href="' . $data->html_url . '">' . $data->name . ' <span class="screen-reader-text">(this link opens in a new window)</span></a></strong>
-			<em>by <a target="_blank" rel="noopener noreferrer" href="' . $data->owner->html_url . '">' . $data->owner->login . ' <span class="screen-reader-text">(this link opens in a new window)</span></a></em>
+			<strong><a target="_blank" rel="noopener noreferrer" href="' . $data->html_url . '">' . $data->name . ' <span class="screen-reader-text">(' . esc_html__( 'this link opens in a new window', 'github-embed-block' ) . ')</span></a></strong>
+			<em>by <a target="_blank" rel="noopener noreferrer" href="' . $data->owner->html_url . '">' . $data->owner->login . ' <span class="screen-reader-text">(' . esc_html__( 'this link opens in a new window', 'github-embed-block' ) . ')</span></a></em>
 		</p>
 		<p class="geb-br-description">' . $data->description . '</p>
 		<p class="geb-br-footer">
 			<span class="geb-br-subscribers">
-				<img src="' . plugin_dir_url( __FILE__ ) . '/images/subscribe.svg" alt="Github" /> 
-				' . $data->subscribers_count . ' Subscribers
+				<img src="' . plugin_dir_url( __FILE__ ) . '/images/subscribe.svg" alt="" /> 
+				' . $data->subscribers_count . ' ' . esc_html__( 'Subscribers', 'github-embed-block' ) . '
 			</span>
 			<span class="geb-br-watchers">
-				<img src="' . plugin_dir_url( __FILE__ ) . '/images/watch.svg" alt="Github" /> 
-				' . $data->watchers_count . ' Watchers
+				<img src="' . plugin_dir_url( __FILE__ ) . '/images/watch.svg" alt="" /> 
+				' . $data->watchers_count . ' ' . esc_html__( 'Watchers', 'github-embed-block' ) . '
 			</span>
 			<span class="geb-br-forks">
-				<img src="' . plugin_dir_url( __FILE__ ) . '/images/fork.svg" alt="Github" /> 
-				' . $data->forks_count . ' Forks
+				<img src="' . plugin_dir_url( __FILE__ ) . '/images/fork.svg" alt="" /> 
+				' . $data->forks_count . ' ' . esc_html__( 'Forks', 'github-embed-block' ) . '
 			</span>
-			<a target="_blank" rel="noopener noreferrer" class="geb-br-link" href="' . $data->html_url . '">Check out this repository on GitHub.com <span class="screen-reader-text">(this link opens in a new window)</span></a>
+			<a target="_blank" rel="noopener noreferrer" class="geb-br-link" href="' . $data->html_url . '">' . esc_html__( 'Check out this repository on GitHub.com', 'github-embed-block' ) . ' <span class="screen-reader-text">(' . esc_html__( 'this link opens in a new window', 'github-embed-block' ) . ')</span></a>
 		</p>
 	</div>
 </div>
